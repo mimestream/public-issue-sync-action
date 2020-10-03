@@ -1,0 +1,21 @@
+name: 'Public Issue Sync'
+description: 'Syncs issues from a private to public repository when tagged with the Public label.'
+inputs:
+  private_repo:
+    description: 'Private repo to copy issue from'
+    required: true
+  public_repo:
+    description: 'Public repository to copy issue to'
+    required: true
+  public_assignee:
+    description: 'User to assign public issues to'
+    required: true
+  bot_username:
+    description: 'Bot account username'
+    required: true
+  bot_access_token:
+    description: 'Bot account personal access token'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
